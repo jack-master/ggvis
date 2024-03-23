@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^http[s]?:\/\/api.yajiji.cc\/api\/\s+\?hid url script-response-body https://jack-master.github.io/ggvis/zufang.js
+^http[s]?:\/\/api.yajiji.cc\/api\/\s+\?hid url script-response-body https://raw.githubusercontent.com/jack-master/ggvis/main/zufang.js
 
 
 [mitm] 

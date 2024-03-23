@@ -8,9 +8,9 @@
 
 [rewrite_local]
 
-^http[s]?:\/\/api.yikaobang.com.cn\/index.php\/curriculum\/main\/detail url script-response-body yikaobang.js
+^http[s]?:\/\/api.yikaobang.com.cn\/index.php\/curriculum\/main\/detail url script-response-body https://jack-master.github.io/ggvis/yikaobang.js
 
-^http[s]?:\/\/api.yikaobang.com.cn\/index.php\/allQuestion\/question\/chapter url script-response-body yikaobang.js
+^http[s]?:\/\/api.yikaobang.com.cn\/index.php\/allQuestion\/question\/chapter url script-response-body https://jack-master.github.io/ggvis/yikaobang.js
 
 https://api.yikaobang.com.cn/index.php/allQuestion/question/chapter
 [mitm] 

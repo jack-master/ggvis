@@ -21,7 +21,7 @@ let obj = JSON.parse($response.body);
 
 obj.data.had_vip = true;
 obj.data.is_device_user = true;
-obj.data.vip_type = "permanent";
+obj.data.vip_type = "temporary";
 obj.data.vip_expire = "2099-12-02 14:09:32";
 
 $done({body:JSON.stringify(obj)});

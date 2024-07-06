@@ -7,13 +7,12 @@
 *******************************
 
 [rewrite_local]
-^http[s]?:\/\/weixin.haoyisheng.com\/wx\/getCourseInfo url script-response-body https://raw.githubusercontent.com/jack-master/ggvis/main/haoyisheng.js
+^https?:\/\/weixin.haoyisheng.com\/wx\/getCourseInfo url script-response-body https://raw.githubusercontent.com/jack-master/ggvis/main/haoyisheng.js
 
-^http[s]?:\/\/weixin.haoyisheng.com\/wx\/getTestsNew  url script-response-body https://raw.githubusercontent.com/jack-master/ggvis/main/haoyisheng.js
+^https?:\/\/weixin.haoyisheng.com\/wx\/getTestsNew url script-response-body https://raw.githubusercontent.com/jack-master/ggvis/main/haoyisheng.js
 
 [mitm] 
 hostname = weixin.haoyisheng.com
-
 
 *******************************/
 

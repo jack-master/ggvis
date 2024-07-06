@@ -21,15 +21,17 @@ var body = $response.body.replace(/study_status":"0"/g,'study_status":"1"');
 }
 
 if ($response.body && $request.url.includes("getTestsNew")) {
-var body = JSON.parse($response.body);
-var tests = body.tests;
-var result = "";
-var simple_result = "答案：";
-for (var i=0; i<tests.length; i++){
-    result += tests[i].answer + " -- " + tests[i].questionTitle + "*****";
-    simple_result += tests[i].answer
-}
 
+var body = JSON.parse($response.body);
+var result = "";
+var simple_result = "";
+
+body.tests.forEach(test => {
+  result += `${test.answer} -- ${test.questionTitle}\n`;
+  simple_result += test.answer;
+});
+
+simple_result = "答案：" + simple_result + "长按查看详情";
 $notify(simple_result, result);
 }
 $done({ body });

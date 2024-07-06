@@ -26,7 +26,7 @@ var tests = body.tests;
 var result = "";
 var simple_result = "答案：";
 for (var i=0; i<tests.length; i++){
-    result += tests[i].answer + " -- " + tests[i].questionTitle + "\n";
+    result += tests[i].answer + " -- " + tests[i].questionTitle + "*****";
     simple_result += tests[i].answer
 }
 

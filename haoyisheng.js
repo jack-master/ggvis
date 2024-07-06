@@ -15,7 +15,7 @@ hostname = weixin.haoyisheng.com
 *******************************/
 
 if ($response.body && $request.url.includes("getCourseInfo")) {
-var body = $response.body.replace(/study_status":"\d"/g,'is_free_watch":"1"');
+var body = $response.body.replace(/study_status":"\d"/g,'study_status":"1"');
 }
 
 $done({ body });

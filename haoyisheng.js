@@ -26,6 +26,6 @@ var result = "";
 body.tests.forEach(test => {
   result += `${test.answer} -- ${test.questionTitle}\n`;
 });
-$notify("恭喜！成功获取答案～", result);
+$notify(result);
 }
 $done({ body });

@@ -31,7 +31,7 @@ body.tests.forEach(test => {
   simple_result += test.answer;
 });
 
-simple_result = "答案：" + simple_result + "长按查看详情";
+simple_result = "答案：" + simple_result + "  长按查看详情";
 $notify(simple_result, result);
 }
 $done({ body });

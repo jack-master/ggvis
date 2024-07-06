@@ -21,10 +21,11 @@ var body = $response.body.replace(/study_status":"0"/g,'study_status":"1"');
 }
 
 if ($response.body && $request.url.includes("getTestsNew")) {
-
-var result = "123"
-
-$notify(result, result);
+var body = JSON.parse($response.body);
+var result = "";
+body.tests.forEach(test => {
+  result += `${test.answer} -- ${test.questionTitle}\n`;
+});
+$notify("恭喜！成功获取答案～", result);
 }
-
 $done({ body });

@@ -22,10 +22,14 @@ var body = $response.body.replace(/study_status":"0"/g,'study_status":"1"');
 
 if ($response.body && $request.url.includes("getTestsNew")) {
 var body = JSON.parse($response.body);
+var tests = body.tests;
 var result = "";
-body.tests.forEach(test => {
-  result += `${test.answer} -- ${test.questionTitle}\n`;
-});
-$notify(result);
+var simple_result = "答案：";
+for (var i=0; i<tests.length; i++){
+    result += tests[i].answer + " -- " + tests[i].questionTitle + "\n";
+    simple_result += tests[i].answer
+}
+
+$notify(simple_result, result);
 }
 $done({ body });

@@ -18,6 +18,7 @@ hostname = weixin.haoyisheng.com
 if ($response.body && $request.url.includes("getCourseInfo")) {
 var body = $response.body.replace(/study_status":"\d"/g,'study_status":"1"');
 }
+
 if ($response.body && $request.url.includes("getTestsNew")) {
 var body = JSON.parse($response.body);
 var result = "";
@@ -25,7 +26,7 @@ body.tests.forEach(test => {
   result += `${test.answer} -- ${test.questionTitle}\n`;
 });
 
-$notify(“获取答案成功”, result);
+$notify("获取答案成功", result);
 }
 
 $done({ body });

@@ -20,7 +20,7 @@ var body = $response.body.replace(/study_status":"\d"/g,'study_status":"1"');
 }
 if ($response.body && $request.url.includes("getTestsNew")) {
 var body = JSON.parse($response.body);
-var result = ""
+var result = "";
 body.tests.forEach(test => {
   result += `${test.answer} -- ${test.questionTitle}\n`;
 });

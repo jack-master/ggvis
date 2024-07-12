@@ -29,6 +29,7 @@ var simple_result = "";
 body.tests.forEach(test => {
   result += `${test.answer} -- ${test.questionTitle}\n`;
   simple_result += test.answer;
+  simple_result += " ";
 });
 
 simple_result = "答案：" + simple_result + "  长按查看详情";

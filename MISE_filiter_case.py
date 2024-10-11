@@ -16,7 +16,7 @@ def extract_case_info(text):
         match = match.group(1)
 
         # 提取案例名
-        case_title_pattern = re.search(r"案例[ \d]\S+", match)
+        case_title_pattern = re.search(r"案例[ \d].*", match)
         case_title = case_title_pattern.group() if case_title_pattern else " "
 
         # 提取案例名

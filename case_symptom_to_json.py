@@ -1,6 +1,6 @@
 # function：制作MISE内外科症状表，注意几个文件路径
 # author：ggvis
-# update：20240323
+# update：20241012
 
 
 import json

@@ -1,8 +1,8 @@
 @echo off
-set /p input_video_path=�����Ƶ�Ͻ�����
-set /p start_time=�����뿪ʼʱ��(Ӣ���ַ�hh:mm:ss)��
-set /p end_time=���������ʱ��(Ӣ���ַ�hh:mm:ss)��
-set /p new_name=�����������ƣ���Ϊ�գ����ɡ�cut_ԭ������
+set /p input_video_path=请把视频拖进来（名称不能有空格）：
+set /p start_time=请输入开始时间(英文字符hh:mm:ss)：
+set /p end_time=请输入结束时间(英文字符hh:mm:ss)：
+set /p new_name=请输入新名称，若为空，则变成“cut_原名”：
 
 for %%I in ("%input_video_path%") do (
     set "extension=%%~xI"
@@ -16,5 +16,5 @@ if "%new_name%"=="" (
 
 ffmpeg -i "%input_video_path%" -ss %start_time% -to %end_time% -c copy "%parent_folder%%new_name%%extension%" >nul 2>&1
 
-echo ��Ƶ�ü���ɣ�
+echo 视频裁剪完成！
 pause

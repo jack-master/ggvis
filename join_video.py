@@ -23,7 +23,7 @@ else:
             f.write(f"file '{video}'\n")
 
     # 合并文件
-    out_name = os.path.basename(path) + videos_list[0][-4:] # 与首个视频后缀相同
+    out_name = os.path.basename(path) + os.path.splitext(videos_list[0])[1] # 与首个视频后缀相同
     ffmpeg.input('file_list.txt', format='concat', safe=0).output(out_name, c='copy').run(quiet=True)
 
     print("合并完成，输出文件:", out_name)

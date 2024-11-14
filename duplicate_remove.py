@@ -1,3 +1,7 @@
+# create by ggvis
+# update: 2024年11月14日
+# function：文件查重并移动到《duplicate_folder》，不包含子目录
+
 import os
 import hashlib
 import shutil

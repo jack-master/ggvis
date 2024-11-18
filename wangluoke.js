@@ -15,6 +15,6 @@ hostname = playvideo.qcloud.com
 *******************************/
 
 if ($response.body) {
-    var body = $response.body.replace(/Duration":.*?,/g, 'Duration":0,');
+    var body = $response.body.replace(/uration":.*?,/g, 'uration":0,');
     }
 $done({ body });

@@ -7,16 +7,13 @@ const result = db.getCollection('miseRecordCaseOperate').find({ $and : [{"emr.co
 
 const fs = require('fs');
 let markdownContent = '';
-let role = '';
-let content = '';
 
 for (i in result) {
     records = result[i].emr.consultationRecord;
     markdownContent += `# 第${i+1}条记录：\n`;;
     for (j in records) {
-        role = records[j].role;
+        let { role, content } = records[j];
         role = role === "user"? "医生" : "患者";
-        content = records[j].content;
         markdownContent += `**${role}**： ${content}\n`;
         }
     markdownContent += '\n';

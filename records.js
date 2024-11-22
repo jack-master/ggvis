@@ -1,5 +1,3 @@
-// mongodb://jcRead:JCkj,@103.40.14.93:27023/distributedguided_clinic
-
 use('distributedguided_clinical');
 
 // 搜索的结果返回给数组result

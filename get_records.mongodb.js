@@ -24,4 +24,4 @@ result.forEach((element,index) => {
     markdownContent += '\n';
 });
 
-fs.writeFileSync(`${result.length}_ records.md`, markdownContent);
+fs.writeFileSync(`${result.length}_records.md`, markdownContent);

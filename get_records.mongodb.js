@@ -1,4 +1,4 @@
-// mongodb://jcRead:JCkj,@103.40.14.93:27023/distributedguided_clinic
+// mongodb://jcRead:JCkj,@103.40.14.93:27023/distributedguided_clinical
 
 use('distributedguided_clinical');
 
